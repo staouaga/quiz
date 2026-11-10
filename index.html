@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Interactive Knowledge Quiz</title>
+</head>
+<body>
+    <div class="quiz-container">
+        <header class="quiz-header">
+            <h1>Interactive Knowledge Quiz</h1>
+            <p>Test your skills across technology and science. Select your answers below and click grade!</p>
+        </header>
+
+        <form id="quizForm">
+            
+            <!-- Question 1: Multiple Choice (Radio Buttons) - Correct is html -->
+            <fieldset>
+                <legend>1. Which programming language is primarily used for structuring web pages? (Multiple Choice)</legend>
+                <input type="radio" id="q1_a" name="q1" value="python">
+                <label for="q1_a">Python</label><br>
+                <input type="radio" id="q1_b" name="q1" value="html">
+                <label for="q1_b">HTML</label><br>
+                <input type="radio" id="q1_c" name="q1" value="cplusplus">
+                <label for="q1_c">C++</label>
+                <div id="q1-feedback" class="feedback"></div>
+            </fieldset>
+
+            <!-- Question 2: Multiple Choice (Radio Buttons) - Correct is h2o -->
+            <fieldset>
+                <legend>2. What is the chemical symbol for water? (Multiple Choice)</legend>
+                <input type="radio" id="q2_a" name="q2" value="co2">
+                <label for="q2_a">CO2</label><br>
+                <input type="radio" id="q2_b" name="q2" value="h2o">
+                <label for="q2_b">H2O</label><br>
+                <input type="radio" id="q2_c" name="q2" value="nacl">
+                <label for="q2_c">NaCl</label>
+                <div id="q2-feedback" class="feedback"></div>
+            </fieldset>
+
+            <!-- Question 3: Multiple Answer (Checkboxes) - Correct are chrome, edge, firefox -->
+            <fieldset>
+                <legend>3. Which of the following are considered valid web browsers? (Select all that apply)</legend>
+                <input type="checkbox" id="q3_a" name="browsers" value="chrome">
+                <label for="q3_a">Google Chrome</label><br>
+                <input type="checkbox" id="q3_b" name="browsers" value="edge">
+                <label for="q3_b">Microsoft Edge</label><br>
+                <input type="checkbox" id="q3_c" name="browsers" value="photoshop">
+                <label for="q3_c">Adobe Photoshop</label><br>
+                <input type="checkbox" id="q3_d" name="browsers" value="firefox">
+                <label for="q3_d">Mozilla Firefox</label>
+                <div id="q3-feedback" class="feedback"></div>
+            </fieldset>
+
+            <!-- Question 4: Multiple Answer (Checkboxes) - Correct are red, green, blue -->
+            <fieldset>
+                <legend>4. Which of the following are primary colors of light in additive color systems? (Select all that apply)</legend>
+                <input type="checkbox" id="q4_a" name="colors" value="red">
+                <label for="q4_a">Red</label><br>
+                <input type="checkbox" id="q4_b" name="colors" value="green">
+                <label for="q4_b">Green</label><br>
+                <input type="checkbox" id="q4_c" name="colors" value="blue">
+                <label for="q4_c">Blue</label><br>
+                <input type="checkbox" id="q4_d" name="colors" value="yellow">
+                <label for="q4_d">Yellow</label>
+                <div id="q4-feedback" class="feedback"></div>
+            </fieldset>
+
+            <div class="btn-group">
+                <button type="button" onclick="gradeQuiz()" class="submit-btn">Grade Quiz</button>
+                <input type="reset" value="Reset Answers" class="reset-btn" onclick="resetQuiz()">
+            </div>
+        </form>
+
+        <div id="score-display" class="score-box" style="display:none;"></div>
+    </div>
+
+    <!-- Link to JavaScript File -->
+    <script src="script.js"></script>
+</body>
+</html>
